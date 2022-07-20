@@ -33,20 +33,13 @@ public class CampaignTest extends BaseClass{
 		SoftAssert sa=new SoftAssert();
 		sa.assertTrue(resulttxt.contains(value));
 		sa.assertAll();
-		//if(resulttxt.contains(value+num))
-		//{
-			System.out.println("campaign created successfully");
-			
-		//}
-		
-		 //else
-		//	System.out.println("Not Successful");
-		
+		System.out.println("campaign created successfully");
 			
 		}
 	@Test(groups = "Regression")
 	public void createcampaignaproductTest() throws Throwable
 	{
+		
 		String value=elib.GetDataFromExcel("book1", 6, 1);
 		String value1=elib.GetDataFromExcel("book1", 5, 2);
 		int num=jlib.CreateRandomNumber();
@@ -65,7 +58,6 @@ public class CampaignTest extends BaseClass{
 		ccp.getCampaignNameTxt().sendKeys(value1+num);
 		String MainWindowTitle=driver.getTitle();
 		ccp.getLookupImg().click();	
-		//wlib.WindowFromParentToChild(driver, MainWindowTitle);
 		ccp.SwitchFromCampaignToProduct(driver, MainWindowTitle);
 		ccp.getChildWindowTxt().sendKeys(value+num);
 		ccp.getChildWindowSearch().click();

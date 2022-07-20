@@ -14,6 +14,7 @@ public class ContactTest extends BaseClass {
 	@Test(groups = "Smoke")
 	public void CreateContactTest() throws Throwable
 	{
+		
 		String value=elib.GetDataFromExcel("book1", 3, 1);
 		int num=jlib.CreateRandomNumber();
 		HomePage hp=new HomePage(driver);
